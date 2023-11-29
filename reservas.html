@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Configurações inciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Hoteleira - Gerenciamento de Reservas</title>
+    <link rel="icon" href="assets/imagens/favicon.png" type="image/png">
+
+    <!-- Integrações internas -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reservas.css">
+    <script src="js/reservas.js"></script>
+
+    <!-- Integrações externos -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div id="loading">
+        <img src="assets/imagens/loading.svg" alt="Carregando">
+    </div>
+
+    <div class="geral">
+        <div class="topo">
+            <div class="conteudo">
+                <a href="index.html">
+                    <span class="material-symbols-outlined icon-topo">Home</span>
+                </a>
+                <a href="index.html" class="link-logo">
+                    <img src="assets/imagens/logo-branco.png" alt="Logotipo" class="logo-topo">
+                </a>
+                <a href="index.html">
+                    <span class="material-symbols-outlined icon-topo">Menu</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="meio">
+            <div class="conteudo modulo">
+                <h1>Gerenciamento de Reservas</h1>
+
+                <!-- Campos do Formulario-->
+                <form>
+                    <input type="hidden" id="campo-id">
+                    <div class="item-form">
+                        <label for="campo-cliente">Cliente:</label>
+                        <select id="campo-cliente">
+                            <option value="">Selecione</option>
+                            <option value="01">José de Almeida Farias</option>
+                            <option value="02">Carlos Alberto Garcia</option>
+                            <option value="03">Lucas da Silva Moraes</option>
+                        </select>
+                    </div>
+                    <div class="item-form">
+                        <label for="campo-acomodacao">Acomodação:</label>
+                        <select id="campo-acomodacao">
+                            <option value="">Selecione</option>
+                            <option value="01">Chalé Família</option>
+                            <option value="02">Cabana das dunas</option>
+                            <option value="03">Chalé Standard</option>
+                        </select>
+                    </div>
+                    <div class="item-form">
+                        <label for="campo-qtd-hospedes">Quantidade de hospedes:</label>
+                        <input type="number" id="campo-qtd-hospedes" placeholder="Digite">
+                    </div>
+                    <div class="item-form">
+                        <label for="campo-data-inicio">Data Inicio:</label>
+                        <input type="date" min="0" id="campo-data-inicio" placeholder="Digite">
+                    </div>
+                    <div class="item-form">
+                        <label for="campo-data-fim">Data Fim:</label>
+                        <input type="date" min="0" id="campo-data-fim" placeholder="Digite">
+                    </div>
+                    <div class="item-form">
+                        <label for="campo-valor-total">Valor Total:</label>
+                        <input type="number" min="0" id="campo-valor-total" placeholder="Digite">
+                    </div>
+                    <div class="botoes">
+                        <button type="button" id="bt-salvar">Salvar</button>
+                        <button type="reset" id="bt-limpar">Limpar</button>
+                        <button type="button" id="bt-cancelar">Cancelar</button>
+                    </div>
+                </form>
+
+                <div class="conteudo-tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Cliente</th>
+                                <th>Acomodação</th>
+                                <th>Qtd. Hospedes</th>
+                                <th>Data Inicio</th>
+                                <th>Data Fim</th>
+                                <th>Valor Total</th>
+                                <th class="col-acoes"></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3"><span id="total-registros">0</span> registros encontrados</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="rodape">
+            <div class="conteudo">
+                <p>© Protótipo de Aplicação para Gestão Hoteleira</p>
+                <p>Todos os direitos reservados</p>
+            </div>
+        </div>                
+    </div>
+</body>
+</html>
